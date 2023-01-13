@@ -249,7 +249,7 @@ with open('statistical_significans_directed_graph_study.pickle', 'wb') as handle
     
 
 # Genetically optimised weights.
-with open('genetic_courses_df.json', 'r') as json_file:
+with open('genetic_directed.json', 'r') as json_file:
     parameter_dict_genetic = json.load(json_file)
 
 recommender = RecommendationEngine(build_graph(parameter_dict_genetic), df)

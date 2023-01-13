@@ -206,7 +206,7 @@ test_file = test_file[[content_collumn, id_user_collumn]].to_numpy()
 
 
 # Genetically optimised weights.
-with open('genetic_courses_df_ud.json', 'r') as json_file:
+with open('genetic_undirected.json', 'r') as json_file:
     parameter_dict_genetic = json.load(json_file)
 
 recommender = RecommendationEngine(build_graph(parameter_dict_genetic), df)

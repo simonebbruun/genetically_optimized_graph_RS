@@ -275,7 +275,7 @@ ga_instance = pygad.GA(num_generations=num_generations,
 ga_instance.run()
 
 
-with open('ga_instance_courses_df_ud.pickle', 'wb') as handle:
+with open('ga_instance_undirected.pickle', 'wb') as handle:
     pickle.dump(ga_instance, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 
@@ -284,5 +284,5 @@ best_solution = np.stack(best_solution, axis=0)
 best_solution_vector = best_solution[-1]
 
     
-with open('genetic_courses_df_ud.json', 'w') as outfile:
+with open('genetic_undirected.json', 'w') as outfile:
     json.dump(parameter_dict_from_vector(best_solution_vector), outfile)
